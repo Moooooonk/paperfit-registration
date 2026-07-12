@@ -25,7 +25,7 @@ This folder is the public code package for the Sensors manuscript.
 
 ## Data note
 
-FaceScape raw data, HRN weights, generated private mesh outputs, local quick-test meshes, figure assets, and server-only files are not included. Prepare the dataset separately and set `PAPERFIT_ROOT` as described in `README.md`.
+FaceScape raw data, HRN weights, private mesh outputs, local quick-test meshes, figure assets, and server-only files are not included. Prepare the dataset separately and set `PAPERFIT_ROOT` as described in `README.md`.
 
 ## Manuscript linkage
 

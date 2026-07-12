@@ -30,11 +30,20 @@ The final accepted set is 346/380 source-target pairs, or 91.05%. The rigid-pass
 
 Distances in the manuscript tables are reported in millimeters. Raw experiment CSV files keep the FaceScape coordinate-unit values unless the column name explicitly ends with `_mm`; the manuscript conversion is `distance_mm = raw_distance * 100`.
 
-## Data
+## External Data and Reconstruction Dependencies
 
-The FaceScape dataset, HRN weights, generated mesh outputs, local quick-test meshes, private server files, and figure asset packages are not included. Prepare the dataset separately under the applicable FaceScape license terms and set `PAPERFIT_ROOT` to the prepared experiment workspace before running scripts.
+This repository does not redistribute FaceScape data, FaceScape-derived meshes or images, HRN weights, HRN output meshes, local quick-test data, or figure asset packages.
 
-Do not add FaceScape-derived OBJ, PLY, texture images, HRN output meshes, local figure assets, or local quick-test data to this repository.
+To reproduce the experiments, prepare the following external resources separately:
+
+- FaceScape dataset: <https://nju-3dv.github.io/projects/FaceScape/>
+- FaceScape license agreement: <https://facescape.nju.edu.cn/static/License_Agreement.pdf>
+- HRN official implementation: <https://github.com/younglbw/hrn>
+- HRN project page: <https://younglbw.github.io/HRN-homepage/>
+
+Use FaceScape only under the provider's license terms. In particular, do not redistribute FaceScape meshes, scans, textures, rendered portraits, or FaceScape-derived mesh/image files through this repository.
+
+Set `PAPERFIT_ROOT` to a local prepared workspace that contains the licensed FaceScape data and HRN reconstruction outputs required by the scripts.
 
 ## Environment
 

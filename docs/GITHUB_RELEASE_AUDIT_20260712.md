@@ -13,7 +13,7 @@ This clean folder is suitable as the candidate GitHub repository for code and ag
 ## What is excluded
 
 - FaceScape raw meshes, scans, textures, rendered portraits, and derived mesh/image assets.
-- HRN model weights and generated HRN mesh caches.
+- HRN model weights and HRN output mesh caches.
 - Local quick-test OBJ/PLY/JPG data.
 - Local figure asset packages and PPT diagrams.
 - Manuscript PDF/LaTeX files.
@@ -25,6 +25,7 @@ This clean folder is suitable as the candidate GitHub repository for code and ag
 - Public wrapper scripts point to existing implementation files.
 - Repository scan found no private local paths or server paths.
 - Repository scan found no raw mesh, scan, model-weight, archive, or image files.
+- External FaceScape and HRN access links are documented in `README.md` and `docs/DATASET_AND_PRIVATE_FILES.md`.
 - The current default local Python environment is Python 3.13.5 and does not have `open3d` installed. Full baseline execution therefore requires a separate Python 3.10/3.11 environment with `requirements.txt` installed.
 
 ## Manuscript consistency checks
@@ -38,7 +39,7 @@ This clean folder is suitable as the candidate GitHub repository for code and ag
 
 ## Runtime scope
 
-The public repository does not include FaceScape data, HRN weights, generated mesh caches, or local figure assets. Therefore, a full 380-pair rerun requires a prepared licensed workspace, `PAPERFIT_ROOT`, and a Python 3.10/3.11 environment with the required packages installed. In this clean release folder, source-level compilation, wrapper-target existence checks, dependency availability checks, and manuscript-result consistency checks were completed; full end-to-end rerun was not performed inside the public folder alone.
+The public repository does not include FaceScape data, HRN weights, HRN output mesh caches, or local figure assets. Therefore, a full 380-pair rerun requires a prepared licensed workspace, `PAPERFIT_ROOT`, and a Python 3.10/3.11 environment with the required packages installed. In this clean release folder, source-level compilation, wrapper-target existence checks, dependency availability checks, and manuscript-result consistency checks were completed; full end-to-end rerun was not performed inside the public folder alone.
 
 ## Post-upload manuscript update
 
