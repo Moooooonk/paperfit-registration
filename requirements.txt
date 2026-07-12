@@ -1,0 +1,9 @@
+﻿numpy
+scipy
+trimesh
+open3d==0.19.0
+opencv-python
+matplotlib
+pillow
+tqdm
+

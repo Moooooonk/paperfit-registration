@@ -1,0 +1,141 @@
+﻿{
+  "cases": [
+    "001_10_dimpler",
+    "001_1_neutral",
+    "002_10_dimpler",
+    "002_1_neutral",
+    "003_10_dimpler",
+    "003_1_neutral",
+    "004_10_dimpler",
+    "004_1_neutral",
+    "005_10_dimpler",
+    "005_1_neutral",
+    "006_10_dimpler",
+    "006_1_neutral",
+    "007_11_chin_raiser",
+    "007_14_sadness",
+    "008_10_dimpler",
+    "008_1_neutral",
+    "009_10_dimpler",
+    "010_15_lip_roll",
+    "011_10_dimpler",
+    "011_1_neutral",
+    "012_10_dimpler",
+    "012_1_neutral",
+    "014_20_brow_lower",
+    "015_10_dimpler",
+    "015_1_neutral",
+    "016_11_chin_raiser",
+    "016_12_lip_puckerer",
+    "017_10_dimpler",
+    "017_1_neutral",
+    "018_10_dimpler",
+    "018_1_neutral",
+    "019_10_dimpler",
+    "019_12_lip_puckerer",
+    "020_13_lip_funneler",
+    "020_19_brow_raiser"
+  ],
+  "case_count": 35,
+  "rigid_root": "${PAPERFIT_ROOT}/research_rigid_upright_hardgate_allpairs_mergedpass_20260622",
+  "output_root": "${PAPERFIT_ROOT}/research_nonrigid_component_ablation_representative40_20260624",
+  "thresholds": [
+    0.0,
+    0.22,
+    0.4,
+    0.55,
+    0.68,
+    0.78,
+    0.87,
+    0.94
+  ],
+  "conditions": {
+    "proposed_S8": {
+      "description": "Eye/orbit exclusion, nasal depth-contour staging, and nasal/midface weights.",
+      "disable_eye_exclusion": false,
+      "disable_contours": false,
+      "disable_region_weights": false
+    },
+    "no_eye_exclusion": {
+      "description": "Allows eyes-open source eye/orbit vertices to participate in fitting.",
+      "disable_eye_exclusion": true,
+      "disable_contours": false,
+      "disable_region_weights": false
+    },
+    "no_nasal_depth_contours": {
+      "description": "Keeps eye/orbit exclusion and local anatomical regions, but removes depth-ordered nasal contour staging.",
+      "disable_eye_exclusion": false,
+      "disable_contours": true,
+      "disable_region_weights": false
+    },
+    "no_region_weights": {
+      "description": "Keeps eye/orbit exclusion and depth contours, but removes additional nasal/midface correspondence weights.",
+      "disable_eye_exclusion": false,
+      "disable_contours": false,
+      "disable_region_weights": true
+    }
+  },
+  "aggregate": {
+    "proposed_S8": {
+      "description": "Eye/orbit exclusion, nasal depth-contour staging, and nasal/midface weights.",
+      "cases": 35,
+      "mean_full_median_before": 0.012565185318331062,
+      "mean_full_median_after": 0.009396690764434688,
+      "mean_full_reduction_pct": 25.216457008986005,
+      "mean_nose_median_before": 0.016862282163747282,
+      "mean_nose_median_after": 0.007705572169020676,
+      "mean_nose_reduction_pct": 54.302910518321696,
+      "mean_nose_p90_after": 0.026551005011963447,
+      "mean_displacement_p90": 0.013054911228603756,
+      "max_eye_fixed": 0.0,
+      "full_improved_cases": 35,
+      "nose_improved_cases": 35
+    },
+    "no_eye_exclusion": {
+      "description": "Allows eyes-open source eye/orbit vertices to participate in fitting.",
+      "cases": 35,
+      "mean_full_median_before": 0.012565185318331062,
+      "mean_full_median_after": 0.009875610150255218,
+      "mean_full_reduction_pct": 21.404978119599118,
+      "mean_nose_median_before": 0.016862282163747282,
+      "mean_nose_median_after": 0.0074204996444929856,
+      "mean_nose_reduction_pct": 55.9935032966858,
+      "mean_nose_p90_after": 0.023400710905908402,
+      "mean_displacement_p90": 0.016525772418739933,
+      "max_eye_fixed": 0.0,
+      "full_improved_cases": 33,
+      "nose_improved_cases": 35
+    },
+    "no_nasal_depth_contours": {
+      "description": "Keeps eye/orbit exclusion and local anatomical regions, but removes depth-ordered nasal contour staging.",
+      "cases": 35,
+      "mean_full_median_before": 0.012565185318331062,
+      "mean_full_median_after": 0.010050468012280364,
+      "mean_full_reduction_pct": 20.013372205358838,
+      "mean_nose_median_before": 0.016862282163747282,
+      "mean_nose_median_after": 0.009878436442920673,
+      "mean_nose_reduction_pct": 41.41696629796283,
+      "mean_nose_p90_after": 0.029323358239383993,
+      "mean_displacement_p90": 0.007738224782322173,
+      "max_eye_fixed": 0.0,
+      "full_improved_cases": 35,
+      "nose_improved_cases": 35
+    },
+    "no_region_weights": {
+      "description": "Keeps eye/orbit exclusion and depth contours, but removes additional nasal/midface correspondence weights.",
+      "cases": 35,
+      "mean_full_median_before": 0.012565185318331062,
+      "mean_full_median_after": 0.009424336379936888,
+      "mean_full_reduction_pct": 24.996439438199623,
+      "mean_nose_median_before": 0.016862282163747282,
+      "mean_nose_median_after": 0.008058527602041484,
+      "mean_nose_reduction_pct": 52.20974525401579,
+      "mean_nose_p90_after": 0.02710563471446877,
+      "mean_displacement_p90": 0.013018599381224296,
+      "max_eye_fixed": 0.0,
+      "full_improved_cases": 35,
+      "nose_improved_cases": 35
+    }
+  },
+  "purpose": "Representative 40-case metrics-only component ablation for manuscript robustness review."
+}

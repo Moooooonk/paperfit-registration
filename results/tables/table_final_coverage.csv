@@ -1,0 +1,7 @@
+﻿stage,accepted_cases,cumulative_accepted,coverage_pct,note
+main_orientation_gated_rigid,214,214,56.315789473684205,strict automatic rigid QC only
+rigid_recovery_merged,22,236,62.10526315789474,includes subject/prior and targeted rigid recovery
+anchor_only_nonrigid_recovery,84,320,84.21052631578947,rigid surface metrics pass but nose-anchor gate fails; S8 recovery accepted
+broadfail_nonrigid_threshold_accept,26,346,91.05263157894737,post-S8 full/nose thresholds accepted; failures still reported
+residual_failure,0,34,8.947368421052632,not counted as success
+

@@ -1,0 +1,8 @@
+﻿{
+  "project_root": "/path/to/prepared/facescape_pipeline",
+  "facescape_dataset_root": "/path/to/FaceScape",
+  "hrn_output_root": "/path/to/hrn_outputs",
+  "output_root": "/path/to/experiment_outputs",
+  "environment_variable": "PAPERFIT_ROOT"
+}
+
