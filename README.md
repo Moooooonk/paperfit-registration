@@ -1,6 +1,6 @@
 # PaperFit Registration
 
-This repository contains the public code package for the Sensors manuscript experiments.
+This repository contains the public code package for the CMES manuscript experiments.
 
 The public entry points are in `scripts/`. The original experiment implementation files are kept once in `paperfit_legacy_impl/` so that manuscript results remain traceable without duplicating similar scripts across folders.
 

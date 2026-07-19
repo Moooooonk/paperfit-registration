@@ -1,6 +1,6 @@
 # Final Code Audit
 
-This folder is the public code package for the Sensors manuscript.
+This folder is the public code package for the CMES manuscript.
 
 ## Verified contents
 
@@ -29,4 +29,4 @@ FaceScape raw data, HRN weights, private mesh outputs, local quick-test meshes, 
 
 ## Manuscript linkage
 
-This package supports the final Sensors manuscript submission. The manuscript package remains the source of truth for submitted PDF, LaTeX, and figure filenames.
+This package supports the final CMES manuscript submission. The manuscript package remains the source of truth for submitted PDF, LaTeX, and figure filenames.
