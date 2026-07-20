@@ -6,4 +6,5 @@ opencv-python
 matplotlib
 pillow
 tqdm
+pytest
 

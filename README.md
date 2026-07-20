@@ -12,6 +12,7 @@ scripts/run_02_auxiliary_rigid_recovery.py
 scripts/run_03_s8_refinement.py
 scripts/run_04_baselines.py
 scripts/run_05_component_ablation.py
+scripts/run_06_final_decision.py
 ```
 
 ## What Is Directly Used
@@ -21,14 +22,15 @@ scripts/run_05_component_ablation.py
 - `run_03_s8_refinement.py`: S8 refinement for rigid-pass, anchor-only, and broad-failure branches.
 - `run_04_baselines.py`: full-target Open3D, cropped-target Open3D, and adaptive-template-inspired baselines.
 - `run_05_component_ablation.py`: representative component ablation.
+- `run_06_final_decision.py`: branch-wise final acceptance and one auditable status per pair.
 
 Files in `paperfit_legacy_impl/` are implementation dependencies used by these entry points. They are not all separate manuscript stages.
 
 ## Key Result
 
-The final accepted set is 346/380 source-target pairs, or 91.05%. The rigid-pass set also undergoes S8 refinement and fixed-eye displacement audit.
+The final accepted set is 346/380 source-target pairs, or 91.05%. The rigid-pass set also undergoes S8 refinement and fixed-eye displacement audit. In S8, the name refers to the eight-stage nasal depth-contour schedule. The implementation then performs five anatomical local updates and three full-face propagation updates outside the fixed eye/orbit region, for an 8+5+3 constrained-update sequence.
 
-Distances in the manuscript tables are reported in millimeters. Raw experiment CSV files keep the FaceScape coordinate-unit values unless the column name explicitly ends with `_mm`; the manuscript conversion is `distance_mm = raw_distance * 100`.
+QC thresholds and aggregate experiment tables retain the numerical coordinate units of the FaceScape target registration frame used by the evaluated code. For physical interpretation, a case-level distance can be converted with the official FaceScape subject/expression scale, `distance_mm = scale(subject, expression) * distance_registration_unit`. A fixed global factor such as `raw * 100` is not used. See `docs/DISTANCE_UNITS.md`.
 
 ## External Data and Reconstruction Dependencies
 
@@ -52,10 +54,14 @@ Use Python 3.10 or 3.11. The baseline scripts require `open3d==0.19.0`, which is
 ```powershell
 $env:PAPERFIT_ROOT = "D:\path\to\prepared\facescape_pipeline"
 python scripts\run_01_main_rigid_qc.py
+python scripts\run_02_auxiliary_rigid_recovery.py
+python scripts\run_03_s8_refinement.py
+python scripts\run_06_final_decision.py --expect-paper-counts
+python scripts\run_06_final_decision.py --expect-paper-counts --facescape-scale-dict D:\path\to\facescape\toolkit\predef\Rt_scale_dict.json
 ```
 
 ## Notes
 
-The original implementation filenames include dates because they correspond to the experiment runs used to derive the manuscript tables. Public-facing scripts use stable names; legacy names are kept only for traceability.
+The original implementation filenames include dates because they correspond to the experiment runs used to derive the manuscript tables. Public-facing scripts use stable names; legacy names are kept only for traceability. `run_03_s8_refinement.py` explicitly disables the legacy 16-case anchor-only smoke-test limit so that all 84 reported anchor-only cases are processed.
 
 This repository does not include manuscript figure source files or PPT diagrams. The submitted manuscript package remains the source of truth for PDF, LaTeX, and final figure files.

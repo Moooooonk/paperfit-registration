@@ -550,7 +550,7 @@ def process_case(case, manifest):
             "case": case,
             "schedule": schedule_name,
             "thresholds": thresholds,
-            "method": "final rigid initialization -> UV eye/orbit exclusion -> nasal depth-contour local ARAP-like refinement -> full no-eye ARAP-like propagation, source-to-target one-way nearest neighbor, no target ROI",
+            "method": "final rigid initialization -> UV eye/orbit exclusion -> weighted edge-preserving nasal depth-contour refinement -> weighted edge-preserving full no-eye propagation, source-to-target one-way nearest neighbor, no target ROI",
             "source_rigid_obj": str(src_obj),
             "target_mesh": str(target_mesh),
             "target_policy": "full eye-closed target mesh converted to registration frame, no ROI crop",
