@@ -323,7 +323,7 @@ def main():
         "thresholds": BEST_THRESHOLDS,
         "conditions": CONDITIONS,
         "aggregate": aggregate,
-        "purpose": "IEEE Access component ablation: isolate eye/orbit exclusion, nasal depth-contour staging, and nasal/midface weighting.",
+        "purpose": "Manuscript component ablation: isolate eye/orbit exclusion, nasal depth-contour staging, and nasal/midface weighting.",
     }
     (OUT / "pipeline_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2), flush=True)
