@@ -2,23 +2,16 @@
 import csv
 import os
 import json
-import os
 import shutil
-import os
 from pathlib import Path
 
 import cv2
-import os
 import matplotlib
-import os
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import os
 from mpl_toolkits.mplot3d import proj3d
 import numpy as np
-import os
 import trimesh
-import os
 from PIL import Image, ImageDraw
 from scipy.sparse import diags, lil_matrix
 from scipy.sparse.linalg import spsolve

@@ -2,9 +2,7 @@
 import csv
 import os
 import json
-import os
 import sys
-import os
 from pathlib import Path
 
 
@@ -14,7 +12,6 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import run_rigid_open3d_baselines_40_20260622 as base40  # noqa: E402
-import os
 
 
 OUT = ROOT / "research_rigid_open3d_baselines_allpairs_20260623"

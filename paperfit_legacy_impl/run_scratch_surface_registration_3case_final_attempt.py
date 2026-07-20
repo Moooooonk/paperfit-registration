@@ -2,20 +2,14 @@
 import csv
 import os
 import json
-import os
 import shutil
-import os
 from pathlib import Path
 
 import matplotlib
-import os
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import os
 import numpy as np
-import os
 import trimesh
-import os
 from scipy.spatial import cKDTree
 from PIL import Image
 

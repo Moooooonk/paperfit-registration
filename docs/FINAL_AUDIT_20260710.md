@@ -10,22 +10,23 @@ This folder is the public code package for the CMES manuscript.
   - `scripts/run_03_s8_refinement.py`
   - `scripts/run_04_baselines.py`
   - `scripts/run_05_component_ablation.py`
+  - `scripts/run_06_final_decision.py`
 - Original implementation dependencies:
   - `paperfit_legacy_impl/*.py`
-- Manuscript result tables and summaries:
+- Manuscript-level numerical result tables:
   - `results/tables/*.csv`
-  - `results/summaries/*.json`
 
 ## Validation performed
 
 - Source-level compile check over all Python files in `scripts/` and `paperfit_legacy_impl/`.
 - Compile errors: 0.
+- Unit tests for branch-specific final acceptance and post-hoc FaceScape millimeter conversion passed.
 - `__pycache__` directories were removed after validation.
-- Manuscript table values were cross-checked against the included aggregate CSV/JSON files.
+- Manuscript table values were cross-checked against the included aggregate CSV files.
 
 ## Data note
 
-FaceScape raw data, HRN weights, private mesh outputs, local quick-test meshes, figure assets, and server-only files are not included. Prepare the dataset separately and set `PAPERFIT_ROOT` as described in `README.md`.
+FaceScape raw data, per-case result rows, HRN weights, private mesh outputs, local quick-test meshes, figure assets, and server-only files are not included. Prepare the dataset separately and set `PAPERFIT_ROOT` as described in `README.md`.
 
 ## Manuscript linkage
 

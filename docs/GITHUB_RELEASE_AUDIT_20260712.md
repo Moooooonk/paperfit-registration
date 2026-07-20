@@ -2,12 +2,12 @@
 
 ## Release decision
 
-This clean folder is suitable as the candidate GitHub repository for code and aggregate-result sharing.
+This clean folder is suitable as the GitHub repository for code and manuscript-level aggregate-result sharing.
 
 ## What is included
 
 - Source code needed to trace the manuscript pipeline.
-- Aggregated result tables and summary JSON files.
+- Manuscript-level aggregate result tables without per-case rows.
 - Documentation describing excluded data and required environment variables.
 
 ## What is excluded
@@ -35,7 +35,7 @@ This clean folder is suitable as the candidate GitHub repository for code and ag
 - Face-ROI Open3D baseline table matches the manuscript values, including the best baseline result of 68/380 strict QC passes (17.89%).
 - Geometry-landmark adaptive-template-inspired baseline values match the manuscript in target-frame coordinate units.
 - Representative Figure 3 table values match the local Figure 3 numeric report after applying the official target-specific FaceScape scale factors.
-- Representative 35-case component ablation values match the aggregate JSON in target-frame coordinate units.
+- Representative 35-case component ablation values match the manuscript table in target-frame coordinate units.
 
 ## Runtime scope
 

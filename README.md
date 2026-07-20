@@ -32,6 +32,8 @@ The final accepted set is 346/380 source-target pairs, or 91.05%. The rigid-pass
 
 QC thresholds and aggregate experiment tables retain the numerical coordinate units of the FaceScape target registration frame used by the evaluated code. For physical interpretation, a case-level distance can be converted with the official FaceScape subject/expression scale, `distance_mm = scale(subject, expression) * distance_registration_unit`. A fixed global factor such as `raw * 100` is not used. See `docs/DISTANCE_UNITS.md`.
 
+The `results/tables/` directory contains only manuscript-level numerical tables. Per-case FaceScape rows, source meshes, target scans, textures, and rendered images are not distributed. Exact S8 parameters and the correspondence between the manuscript equations and implementation are documented in `docs/METHOD_CODE_ALIGNMENT.md`.
+
 ## External Data and Reconstruction Dependencies
 
 This repository does not redistribute FaceScape data, FaceScape-derived meshes or images, HRN weights, HRN output meshes, local quick-test data, or figure asset packages.
@@ -39,7 +41,7 @@ This repository does not redistribute FaceScape data, FaceScape-derived meshes o
 To reproduce the experiments, prepare the following external resources separately:
 
 - FaceScape dataset: <https://nju-3dv.github.io/projects/FaceScape/>
-- FaceScape license agreement: <https://facescape.nju.edu.cn/static/License_Agreement.pdf>
+- FaceScape license agreement: <https://nju-3dv.github.io/projects/FaceScape/static/license/LicenseAgreement_FaceScape.pdf>
 - HRN official implementation: <https://github.com/younglbw/hrn>
 - HRN project page: <https://younglbw.github.io/HRN-homepage/>
 

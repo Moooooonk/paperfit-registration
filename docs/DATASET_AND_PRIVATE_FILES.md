@@ -13,7 +13,7 @@ This release excludes:
 External resources must be obtained separately from their official providers:
 
 - FaceScape dataset: <https://nju-3dv.github.io/projects/FaceScape/>
-- FaceScape license agreement: <https://facescape.nju.edu.cn/static/License_Agreement.pdf>
+- FaceScape license agreement: <https://nju-3dv.github.io/projects/FaceScape/static/license/LicenseAgreement_FaceScape.pdf>
 - HRN official implementation: <https://github.com/younglbw/hrn>
 - HRN project page: <https://younglbw.github.io/HRN-homepage/>
 

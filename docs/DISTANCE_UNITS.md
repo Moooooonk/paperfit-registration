@@ -14,11 +14,11 @@ therefore be reported as:
 distance_mm = Rt_scale_dict[subject][target_expression][0] * distance_registration_unit
 ```
 
-The evaluated experiment used expression 18 as the target. Across subjects
-001--020, the corresponding factors range from 144.59 to 517.93 mm/unit, with
-a median of 235.04 mm/unit. Thus, 0.01 registration units corresponds to a
-median of about 2.35 mm (range 1.45--5.18 mm). A fixed conversion such as
-`raw * 100` is not scientifically justified and is not used.
+The evaluated experiment used expression 18 as the target. Across the 20
+evaluated target scans, the corresponding factors range from 144.59 to 517.93
+mm/unit, with a median of 235.04 mm/unit. Thus, 0.01 registration units
+corresponds to a median of about 2.35 mm (range 1.45--5.18 mm). A fixed
+conversion such as `raw * 100` is not scientifically justified and is not used.
 
 Reproducing the reported 380-pair experiment requires retaining the same
 target-frame coordinates and thresholds. Millimeter columns may be added

@@ -1,0 +1,5 @@
+variant,cases,full_median,nose_median,nose_p90,displacement_p90,eye_orbit_fixed
+Proposed S8,35,0.0094,0.0077,0.0266,0.0131,Yes
+No eye exclusion,35,0.0099,0.0074,0.0234,0.0165,No
+No nasal depth contours,35,0.0101,0.0099,0.0293,0.0077,Yes
+No region weights,35,0.0094,0.0081,0.0271,0.0130,Yes

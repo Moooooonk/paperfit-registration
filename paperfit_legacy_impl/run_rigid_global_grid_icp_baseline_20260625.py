@@ -10,17 +10,12 @@ the existing rigid baselines.
 import argparse
 import os
 import csv
-import os
 import json
-import os
 import sys
-import os
 import time
-import os
 from pathlib import Path
 
 import numpy as np
-import os
 from scipy.spatial import cKDTree
 
 
@@ -30,13 +25,9 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import run_scratch_surface_registration_3case_final_attempt as rigid  # noqa: E402
-import os
 import run_rigid_upright_hardgate_3case_20260619 as hard3  # noqa: E402
-import os
 import run_rigid_global_upright_failed11_20260617 as global_rigid  # noqa: E402
-import os
 import run_rigid_open3d_baselines_allpairs_20260623 as allpairs_base  # noqa: E402
-import os
 
 
 MANIFEST = ROOT / "prepared_001_020_cv" / "facescape_frontal_pairs_manifest.csv"

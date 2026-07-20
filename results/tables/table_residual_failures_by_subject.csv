@@ -1,6 +1,5 @@
-﻿subject,remaining_fail_cases
-007,12
-009,14
-013,7
-016,1
-
+anonymized_subject_cluster,remaining_fail_cases
+Cluster 1,12
+Cluster 2,14
+Cluster 3,7
+Isolated case,1

@@ -7,7 +7,7 @@ The files in `paperfit_legacy_impl/` are included because the public scripts cal
 ## Direct manuscript stages
 
 - Main rigid QC: `run_rigid_upright_hardgate_allpairs_20260622.py`
-- Auxiliary rigid recovery: `run_rigid_allpairs_subject004_prior_recovery_20260622.py`, `run_rigid_allpairs_nose_anchor_targeted_recovery_20260622.py`
+- Auxiliary rigid recovery: `run_rigid_upright_hardgate_allpairs_recovery_20260622.py`, `run_rigid_allpairs_subject004_prior_recovery_20260622.py`, `run_rigid_allpairs_nose_anchor_targeted_recovery_20260622.py`
 - Effective status merge: `make_allpairs_effective_status_20260623.py`
 - S8 rigid-pass branch: `run_nonrigid_proposed_s8_allpairs_20260622.py`
 - S8 anchor-only branch: `run_nonrigid_proposed_s8_allpairs_rough_anchorfail_20260623.py`

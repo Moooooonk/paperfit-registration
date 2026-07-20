@@ -2,14 +2,11 @@
 import csv
 import os
 import json
-import os
 import sys
-import os
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
-import os
 
 
 ROOT = Path(os.environ.get("PAPERFIT_ROOT", "/path/to/prepared/facescape_pipeline"))
@@ -18,9 +15,7 @@ if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 
 import run_nonrigid_component_ablation_goodrigid_6case_20260611 as comp  # noqa: E402
-import os
 import run_nonrigid_nasal_depth_ablation_3case as nonrigid  # noqa: E402
-import os
 
 
 RIGID_ROOT = ROOT / "research_rigid_upright_hardgate_allpairs_mergedpass_20260622"
