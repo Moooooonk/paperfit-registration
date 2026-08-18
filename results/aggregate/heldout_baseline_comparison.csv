@@ -1,0 +1,5 @@
+method,subjects,accepted,attempted,mean_subject_rate,ci_low,ci_high,proposed_minus_method_pp,difference_ci_low_pp,difference_ci_high_pp,holm_p
+Proposed S8 (HRN),10,168,190,0.884211,0.678947,1.000000,NA,NA,NA,NA
+Open3D FPFH-RANSAC+ICP common ROI,10,4,190,0.021053,0.000000,0.042105,86.315789,66.315789,97.894737,0.011719
+Open3D ICP shared cues,10,101,190,0.531579,0.289474,0.768421,35.263158,12.631579,58.947368,0.015625
+Open3D ARAP-A,10,0,190,0.000000,0.000000,0.000000,88.421053,67.894737,100.000000,0.011719

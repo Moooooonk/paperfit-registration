@@ -1,0 +1,7 @@
+metric,available_pairs,subjects_with_values,mean_subject_mean,ci_low,ci_high
+full_median_mm,171,9,2.272620,1.960535,2.595961
+full_p90_mm,171,9,10.490357,8.411873,12.789134
+nose_median_mm,171,9,0.857844,0.732500,0.991902
+nose_p90_mm,171,9,2.650918,2.217274,3.110907
+semantic_anchor_mm,171,9,9.878332,8.347125,11.518073
+edge_strain_p99,171,9,0.149116,0.128745,0.169220

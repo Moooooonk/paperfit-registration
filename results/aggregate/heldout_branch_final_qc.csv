@@ -1,0 +1,7 @@
+source_method,pre_s8_branch,attempted,completed,invalid_or_incomplete,accepted_after_common_qc,rejected_after_common_qc
+HRN,rigid_pass,168,168,0,165,3
+HRN,anchor_only,0,0,0,0,0
+HRN,broad_failure,22,3,19,3,19
+3DDFA-V2,rigid_pass,125,125,0,122,3
+3DDFA-V2,anchor_only,1,1,0,0,1
+3DDFA-V2,broad_failure,64,45,19,42,22

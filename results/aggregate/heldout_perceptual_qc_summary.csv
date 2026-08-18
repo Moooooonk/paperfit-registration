@@ -1,0 +1,17 @@
+metric,value,ci_low,ci_high,notes
+cases,190,,,10 held-out identities with 19 expressions each
+primary_raters,2,,,complete independent ratings
+adjudicator,1,,,rated only the five R1-R2 overall-usability disagreements
+r1_r2_overall_agreement,0.9736842105,,,185 of 190 cases
+r1_r2_cohen_kappa,0.8571428571,0.0,0.9224806202,confidence interval resamples whole subjects
+consensus_visually_usable,169,,,resolved after blinded adjudication
+consensus_visually_usable_rate,0.8894736842,0.6842105263,1.0,confidence interval resamples whole subjects
+qc_true_positive,168,,,
+qc_false_positive,0,,,
+qc_true_negative,21,,,
+qc_false_negative,1,,,
+qc_accuracy,0.9947368421,0.9842105263,1.0,confidence interval resamples whole subjects
+qc_positive_predictive_value,1.0,1.0,1.0,confidence interval resamples whole subjects
+qc_sensitivity,0.9940828402,0.9819277108,1.0,confidence interval resamples whole subjects
+qc_specificity,1.0,1.0,1.0,confidence interval resamples whole subjects
+qc_balanced_accuracy,0.9970414201,0.9909638554,1.0,confidence interval resamples whole subjects

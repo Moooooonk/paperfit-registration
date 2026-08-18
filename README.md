@@ -1,69 +1,95 @@
-# PaperFit Registration
+# PaperFit Registration: CMES Revision Code
 
-This repository contains the public code package for the CMES manuscript experiments.
+This package contains the sanitized code and aggregate numerical results for
+the revised CMES evaluation of eye-preserving cross-source 3D face
+registration. It corresponds to the identity-disjoint, millimeter-scale,
+branch-independent evaluation described in the revised manuscript.
 
-The public entry points are in `scripts/`. The original experiment implementation files are kept once in `paperfit_legacy_impl/` so that manuscript results remain traceable without duplicating similar scripts across folders.
+## What Is Included
 
-## Public Entry Points
+- `revision_tools/`: target-anchor and face-ROI construction, HRN/3DDFA-V2
+  rigid registration, S8 refinement, Open3D rigid controls, the shared-cues
+  ICP control, ARAP, and full-case ablation.
+- `analysis_tools/`: identity splitting, development-only QC calibration,
+  fail-closed evaluation, subject-clustered statistics, paired tests, Holm
+  correction, sensitivity analysis, and blinded-rating aggregation.
+- `results/aggregate/`: manuscript-level automatic results only. These files
+  contain no FaceScape geometry, image, subject mapping, or per-case row.
+- `docs/`: physical-unit provenance and data-handling restrictions.
 
-```text
-scripts/run_01_main_rigid_qc.py
-scripts/run_02_auxiliary_rigid_recovery.py
-scripts/run_03_s8_refinement.py
-scripts/run_04_baselines.py
-scripts/run_05_component_ablation.py
-scripts/run_06_final_decision.py
-```
+## External Inputs
 
-## What Is Directly Used
+The package does not redistribute FaceScape data, FaceScape-derived meshes or
+images, HRN or 3DDFA-V2 model weights, reconstruction outputs, target scans,
+rating panels, or private case keys. Obtain and use each external resource
+under its provider's terms:
 
-- `run_01_main_rigid_qc.py`: main all-pairs rigid candidate generation and strict QC.
-- `run_02_auxiliary_rigid_recovery.py`: auxiliary rigid recovery and effective rigid-status merge.
-- `run_03_s8_refinement.py`: S8 refinement for rigid-pass, anchor-only, and broad-failure branches.
-- `run_04_baselines.py`: full-target Open3D, cropped-target Open3D, and adaptive-template-inspired baselines.
-- `run_05_component_ablation.py`: representative component ablation.
-- `run_06_final_decision.py`: branch-wise final acceptance and one auditable status per pair.
+- FaceScape: <https://nju-3dv.github.io/projects/FaceScape/>
+- HRN: <https://github.com/younglbw/hrn>
+- 3DDFA-V2: <https://github.com/cleardusk/3DDFA_V2>
 
-Files in `paperfit_legacy_impl/` are implementation dependencies used by these entry points. They are not all separate manuscript stages.
-
-## Key Result
-
-The final accepted set is 346/380 source-target pairs, or 91.05%. The rigid-pass set also undergoes S8 refinement and fixed-eye displacement audit. In S8, the name refers to the eight-stage nasal depth-contour schedule. The implementation then performs five anatomical local updates and three full-face propagation updates outside the fixed eye/orbit region, for an 8+5+3 constrained-update sequence.
-
-QC thresholds and aggregate experiment tables retain the numerical coordinate units of the FaceScape target registration frame used by the evaluated code. For physical interpretation, a case-level distance can be converted with the official FaceScape subject/expression scale, `distance_mm = scale(subject, expression) * distance_registration_unit`. A fixed global factor such as `raw * 100` is not used. See `docs/DISTANCE_UNITS.md`.
-
-The `results/tables/` directory contains only manuscript-level numerical tables. Per-case FaceScape rows, source meshes, target scans, textures, and rendered images are not distributed. Exact S8 parameters and the correspondence between the manuscript equations and implementation are documented in `docs/METHOD_CODE_ALIGNMENT.md`.
-
-## External Data and Reconstruction Dependencies
-
-This repository does not redistribute FaceScape data, FaceScape-derived meshes or images, HRN weights, HRN output meshes, local quick-test data, or figure asset packages.
-
-To reproduce the experiments, prepare the following external resources separately:
-
-- FaceScape dataset: <https://nju-3dv.github.io/projects/FaceScape/>
-- FaceScape license agreement: <https://nju-3dv.github.io/projects/FaceScape/static/license/LicenseAgreement_FaceScape.pdf>
-- HRN official implementation: <https://github.com/younglbw/hrn>
-- HRN project page: <https://younglbw.github.io/HRN-homepage/>
-
-Use FaceScape only under the provider's license terms. In particular, do not redistribute FaceScape meshes, scans, textures, rendered portraits, or FaceScape-derived mesh/image files through this repository.
-
-Set `PAPERFIT_ROOT` to a local prepared workspace that contains the licensed FaceScape data and HRN reconstruction outputs required by the scripts.
+The revised 3DDFA-V2 run used commit
+`1b6c67601abffc1e9f248b291708aef0e43b55ae` and
+`configs/mb1_120x120.yml` from the official repository.
 
 ## Environment
 
-Use Python 3.10 or 3.11. The baseline scripts require `open3d==0.19.0`, which is not available for Python 3.13 in the standard PyPI wheels.
+Use Python 3.10 or 3.11. Open3D 0.19.0 does not provide the same standard
+wheel coverage for every newer Python release.
 
-```powershell
-$env:PAPERFIT_ROOT = "D:\path\to\prepared\facescape_pipeline"
-python scripts\run_01_main_rigid_qc.py
-python scripts\run_02_auxiliary_rigid_recovery.py
-python scripts\run_03_s8_refinement.py
-python scripts\run_06_final_decision.py --expect-paper-counts
-python scripts\run_06_final_decision.py --expect-paper-counts --facescape-scale-dict D:\path\to\facescape\toolkit\predef\Rt_scale_dict.json
+```text
+python -m venv .venv
+python -m pip install -r requirements.txt
 ```
 
-## Notes
+Set `PAPERFIT_ROOT` to a separately prepared, licensed workspace. The scripts
+also accept explicit input and output paths; use `--help` for the full command
+line of each stage. Outputs are required to remain under the configured root,
+and existing result directories are not silently overwritten.
 
-The original implementation filenames include dates because they correspond to the experiment runs used to derive the manuscript tables. Public-facing scripts use stable names; legacy names are kept only for traceability. `run_03_s8_refinement.py` explicitly disables the legacy 16-case anchor-only smoke-test limit so that all 84 reported anchor-only cases are processed.
+`run_anchor_aware_s8_pilot.py` retains its original development filename for
+provenance and code-map continuity. The revised production scripts import
+only its frozen S8 core functions; its historical direct-execution pilot is
+not a revised headline experiment.
 
-This repository does not include manuscript figure source files or PPT diagrams. The submitted manuscript package remains the source of truth for PDF, LaTeX, and final figure files.
+## Revised Evaluation Order
+
+1. Build the target face ROI and semantic target anchors with
+   `build_mediapipe_target_anchors.py`.
+2. Reconstruct the secondary source with the official 3DDFA-V2 code, if that
+   comparison is required.
+3. Run `run_pairwise_mm_rigid.py` with the frozen identity split and official
+   FaceScape target scale dictionary.
+4. Run `run_mm_s8_from_rigid.py` for every evaluable pre-S8 stratum.
+5. Apply the frozen branch-independent conjunction with
+   `analysis_tools/apply_frozen_common_qc.py`.
+6. Run the conventional common-ROI, shared-cues ICP, ARAP, and ablation tools
+   under the same target support, scale, denominator, and final QC.
+7. Use `analysis_tools/` to reproduce subject-clustered intervals, paired
+   tests, sensitivity analyses, and aggregate tables.
+
+The frozen common final limits are 6 mm full-surface median, 30 mm full-surface p90, 3 mm
+nasal median, 10 mm nasal p90, 30 mm semantic nose-anchor distance, 0.35 p99
+edge strain, valid facial orientation, and a `1e-6` mm fixed-eye implementation
+audit. Invalid evidence and native solver failures remain failed attempts in
+the denominator.
+
+## Reproducibility Boundary
+
+The automatic held-out experiment was executed once after all development
+settings and hashes were frozen. Do not use held-out outcomes to revise a
+threshold or method setting. Human-rating panels remain private because they
+are FaceScape-derived. The completed, locked held-out assessment is released
+only as aggregate agreement and QC-predictive statistics in
+`results/aggregate/`.
+
+## Current Automatic Result
+
+On the 10-identity, 190-pair HRN held-out partition, the proposed method
+accepted 168/190 attempts. 3DDFA-V2 accepted 164/190, shared-cues Open3D ICP
+accepted 101/190, common-ROI FPFH-RANSAC+ICP accepted 4/190, and ARAP-A
+accepted 0/190 under the same common final QC. See `results/aggregate/` for
+subject-aware intervals and the complete automatic summaries. Blinded
+consensus judged 169/190 HRN held-out outputs visually usable; the frozen QC
+had 168 true positives, no false positives, 21 true negatives, and one false
+negative.

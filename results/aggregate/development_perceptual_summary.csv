@@ -1,0 +1,11 @@
+quantity,value
+complete_raters,2
+cases_per_complete_rater,190
+overall_exact_agreement,183
+overall_agreement_rate,0.963158
+overall_cohen_kappa,0.836
+adjudicated_disagreements,7
+consensus_visually_usable,167
+nasal_midface_quadratic_weighted_kappa,0.847
+eye_orbit_quadratic_weighted_kappa,0.862
+broader_placement_quadratic_weighted_kappa,0.782

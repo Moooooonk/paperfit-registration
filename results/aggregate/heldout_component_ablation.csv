@@ -1,0 +1,5 @@
+condition,accepted,attempted,mean_subject_rate,ci_low,ci_high
+complete_s8,168,190,0.884211,0.678947,1.000000
+no_eye_orbit_exclusion,0,190,0.000000,0.000000,0.000000
+no_nasal_depth_contours,167,190,0.878947,0.678947,0.994737
+no_semantic_regional_multipliers,168,190,0.884211,0.678947,1.000000

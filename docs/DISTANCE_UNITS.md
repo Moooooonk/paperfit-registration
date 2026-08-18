@@ -1,30 +1,32 @@
-# Distance Units
+# Distance Units in the Revised Evaluation
 
-All distance thresholds, CSV values, and manuscript tables use the numerical
-coordinate units of the target registration frame used by the evaluated code.
+The revised rigid, S8, baseline, QC, and statistical outputs are computed and
+reported in millimeters. FaceScape multi-view PLY models have scan-dependent
+Structure-from-Motion scale. The official FaceScape alignment example provides
+a subject- and expression-specific factor for alignment to the topologically
+uniform canonical models, whose unit is millimeters.
 
-The FaceScape multi-view PLY models are reconstructed at an uncertain
-Structure-from-Motion scale. The official FaceScape alignment example states
-that the topologically uniform canonical models use millimeters and provides
-subject/expression-specific scale metadata for transforming a multi-view PLY
-model into that canonical coordinate system. A case-level distance can
-therefore be reported as:
+For subject `j` and target expression `e`, the conversion is:
 
 ```text
-distance_mm = Rt_scale_dict[subject][target_expression][0] * distance_registration_unit
+distance_mm = Rt_scale_dict[j][e][0] * distance_registration_unit
 ```
 
-The evaluated experiment used expression 18 as the target. Across the 20
-evaluated target scans, the corresponding factors range from 144.59 to 517.93
-mm/unit, with a median of 235.04 mm/unit. Thus, 0.01 registration units
-corresponds to a median of about 2.35 mm (range 1.45--5.18 mm). A fixed
-conversion such as `raw * 100` is not scientifically justified and is not used.
+Expression 18 is the target in this study. Across the 20 evaluated targets,
+the official factors range from 144.59 to 517.93 mm per registration unit,
+with a median of 235.04. A fixed multiplier such as `raw * 100` is therefore
+not used.
 
-Reproducing the reported 380-pair experiment requires retaining the same
-target-frame coordinates and thresholds. Millimeter columns may be added
-post hoc for interpretation without changing the registration or acceptance
-decisions. Operating the pipeline itself with subject-independent millimeter
-thresholds would be a different protocol and would require scale-aware
-recalibration and validation.
+Every revised target mesh, target face ROI, and target anchor is converted
+before optimization. Source scale is then fixed by the target-to-source 3D
+interocular-distance ratio. Distance-valued inherited optimizer constants are
+converted with the median factor from development identities only
+(262.581050 mm per registration unit). Final case measurements and QC evidence
+always use the official factor for that case's target; no held-out scale is
+used to select a threshold or method setting.
 
-Official source: <https://github.com/zhuhao-nju/facescape/blob/master/toolkit/demo_align.ipynb>
+Official source:
+<https://github.com/zhuhao-nju/facescape/blob/master/toolkit/demo_align.ipynb>
+
+Preserved `Rt_scale_dict.json` SHA-256:
+`b40a929b11a2ba99bc14ba9497740c0214a14979ab2dac6794a7a3c8bb729d02`.
