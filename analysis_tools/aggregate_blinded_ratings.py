@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate blinded perceptual ratings and create conservative consensus."""
+"""Validate masked perceptual ratings and create final visual-reference labels."""
 
 from __future__ import annotations
 
@@ -720,8 +720,10 @@ def main() -> None:
             for row in metadata_rows
         ],
         "rule": (
-            "Primary reference: resolved consensus overall visual registration "
-            "usability. Region-specific, orientation, deformation, and eye/orbit "
+            "Primary reference: final overall visual-registration-usability label. "
+            "The shared label is retained when R1 and R2 agree; a two-of-three "
+            "majority label is used after a third masked rating when they disagree. "
+            "Region-specific, orientation, deformation, and eye/orbit "
             "ratings are reported as diagnostic outcomes. A strict multidomain "
             "conjunction is retained only as a secondary sensitivity outcome."
         ),
@@ -729,14 +731,14 @@ def main() -> None:
             "Eye/orbit preservation is reported as a secondary constraint-fidelity "
             "check and is excluded from the primary visual-usability conjunction "
             "because S8 explicitly restores the fixed eye/orbit vertices. "
-            "The primary endpoint is the direct overall-usability consensus; the "
+            "The primary endpoint is the direct overall-usability label; the "
             "regional scores explain that judgment rather than mechanically "
             "redefining it. "
             "For binary fields and the prespecified ordinal >=4 adequacy threshold, "
-            "two-rater disagreements remain unresolved until a third blinded form "
+            "two-rater disagreements remain unresolved until a third masked form "
             "is supplied. Three-rater decisions use majority vote. Unresolved cases "
-            "are never positive. A partial third form is used only for blinded "
-            "adjudication; agreement statistics then use the two complete primary "
+            "are never positive. A partial third form is used only for disagreement "
+            "rating; agreement statistics then use the two complete primary "
             "raters only. Rater scope is fixed in metadata and is not inferred from "
             "Cannot-judge cells. Kappa intervals resample whole subjects."
         ),

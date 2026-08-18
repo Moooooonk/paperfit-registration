@@ -12,7 +12,7 @@ branch-independent evaluation described in the revised manuscript.
   ICP control, ARAP, and full-case ablation.
 - `analysis_tools/`: identity splitting, development-only QC calibration,
   fail-closed evaluation, subject-clustered statistics, paired tests, Holm
-  correction, sensitivity analysis, and blinded-rating aggregation.
+  correction, sensitivity analysis, and masked-rating aggregation.
 - `results/aggregate/`: manuscript-level automatic results only. These files
   contain no FaceScape geometry, image, subject mapping, or per-case row.
 - `docs/`: physical-unit provenance and data-handling restrictions.
@@ -89,7 +89,9 @@ On the 10-identity, 190-pair HRN held-out partition, the proposed method
 accepted 168/190 attempts. 3DDFA-V2 accepted 164/190, shared-cues Open3D ICP
 accepted 101/190, common-ROI FPFH-RANSAC+ICP accepted 4/190, and ARAP-A
 accepted 0/190 under the same common final QC. See `results/aggregate/` for
-subject-aware intervals and the complete automatic summaries. Blinded
-consensus judged 169/190 HRN held-out outputs visually usable; the frozen QC
-had 168 true positives, no false positives, 21 true negatives, and one false
-negative.
+subject-aware intervals and the complete automatic summaries. The two primary
+raters gave the same overall-usability label for 185/190 HRN held-out outputs.
+A third evaluator rated only the five disagreements without seeing the primary
+ratings or hidden case metadata and QC results. The resulting final visual
+reference classified 169/190 outputs as usable; the frozen QC had 168 true
+positives, no false positives, 21 true negatives, and one false negative.
