@@ -1,7 +1,7 @@
 source_method,partition,subjects,accepted,attempted,mean_subject_rate,ci_low,ci_high
 HRN,development,10,173,190,0.910526,0.773684,1.000000
-HRN,heldout,10,168,190,0.884211,0.678947,1.000000
+HRN,evaluation,10,168,190,0.884211,0.678947,1.000000
 HRN,combined_secondary,20,341,380,0.897368,0.771053,0.986842
 3DDFA-V2,development,10,169,190,0.889474,0.742105,1.000000
-3DDFA-V2,heldout,10,164,190,0.863158,0.657895,0.984211
+3DDFA-V2,evaluation,10,164,190,0.863158,0.657895,0.984211
 3DDFA-V2,combined_secondary,20,333,380,0.876316,0.750000,0.971053

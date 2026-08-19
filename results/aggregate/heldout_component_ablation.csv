@@ -1,5 +1,5 @@
-condition,accepted,attempted,mean_subject_rate,ci_low,ci_high
-complete_s8,168,190,0.884211,0.678947,1.000000
-no_eye_orbit_exclusion,0,190,0.000000,0.000000,0.000000
-no_nasal_depth_contours,167,190,0.878947,0.678947,0.994737
-no_semantic_regional_multipliers,168,190,0.884211,0.678947,1.000000
+condition,outcome_definition,outcome_count,attempted,mean_subject_rate,ci_low,ci_high,paired_pairs,paired_subjects,key_effect_1,key_effect_1_difference,key_effect_1_ci_low,key_effect_1_ci_high,key_effect_2,key_effect_2_difference,key_effect_2_ci_low,key_effect_2_ci_high
+complete_s8,final_acceptance,168,190,0.884211,0.678947,1.000000,NA,NA,reference,NA,NA,NA,reference,NA,NA,NA
+no_eye_orbit_exclusion_or_fixation,passage_of_remaining_non_eye_geometric_gates,170,190,0.894737,0.694737,1.000000,171,9,eye_fixed_max_mm,3.545494,3.052201,4.096324,post_nose_p90_mm,-0.492490,-0.724044,-0.277683
+no_nasal_depth_contours,final_acceptance,167,190,0.878947,0.678947,0.994737,171,9,post_nose_median_mm,0.261220,0.205000,0.322000,edge_strain_p99,-0.023800,-0.031300,-0.016700
+no_semantic_regional_multipliers,final_acceptance,168,190,0.884211,0.678947,1.000000,171,9,post_nose_median_mm,0.047526,0.037300,0.059300,edge_strain_p99,-0.004200,-0.005700,-0.002900

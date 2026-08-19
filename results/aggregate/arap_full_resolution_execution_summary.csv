@@ -1,0 +1,2 @@
+setting,partition,subjects,attempted,completed,orientation_pass,mesh_mode,control_count,rounds,max_step_mm,solver_iterations,eye_constraints,displacement_transfer,post_solve_eye_restoration
+ARAP-FR,evaluation,10,190,190,190,full,300,1,0.5,10,all_eye_orbit_vertices,direct,none

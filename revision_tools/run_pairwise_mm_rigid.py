@@ -35,7 +35,7 @@ BASE_ROTATION = np.array(
 SCALE_RATIOS = np.asarray([1.0], dtype=np.float64)
 # Physical versions of the submitted 0.010 and 0.055 target-unit guards.
 # The conversion uses only the frozen development identities (median official
-# FaceScape expression-18 scale), never a held-out identity.
+# FaceScape expression-18 scale), never an evaluation identity.
 DEVELOPMENT_REFERENCE_MM_PER_UNIT = 262.58104988598365
 TRANSLATION_STEP_CAP_MM = 0.010 * DEVELOPMENT_REFERENCE_MM_PER_UNIT
 MOUTH_TO_NOSE_GUARD_MM = 0.055 * DEVELOPMENT_REFERENCE_MM_PER_UNIT

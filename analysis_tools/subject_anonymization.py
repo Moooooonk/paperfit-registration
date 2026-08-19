@@ -15,7 +15,7 @@ def build_anonymized_subject_labels(split: dict[str, Any]) -> dict[str, str]:
     if len(development) != len(set(development)) or len(test) != len(set(test)):
         raise ValueError("Duplicate subject in frozen split")
     if set(development) & set(test):
-        raise ValueError("Development and held-out subjects overlap")
+        raise ValueError("Development and evaluation subjects overlap")
 
     all_subjects = set(development) | set(test)
     ranked_raw = split.get("ranked_subjects", development + test)
@@ -33,7 +33,7 @@ def build_anonymized_subject_labels(split: dict[str, Any]) -> dict[str, str]:
     }
     labels.update(
         {
-            subject: f"H{index:02d}"
+            subject: f"E{index:02d}"
             for index, subject in enumerate(test_order, start=1)
         }
     )

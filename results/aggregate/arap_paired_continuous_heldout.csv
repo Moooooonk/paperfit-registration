@@ -1,9 +1,0 @@
-metric,paired_cases,subjects,arap_minus_s8_mean_subject_difference,ci_low,ci_high
-full_median_mm,166,9,-1.557565,-1.863912,-1.252000
-full_p90_mm,166,9,-3.792702,-4.399715,-3.180448
-nose_median_mm,166,9,0.026852,-0.010530,0.062415
-nose_p90_mm,166,9,0.124278,0.038214,0.211732
-semantic_anchor_mm,166,9,-0.236415,-0.450618,-0.008760
-edge_strain_p99,166,9,0.545991,0.440286,0.646561
-displacement_p90_mm,166,9,4.428657,4.143064,4.691454
-fixed_eye_max_mm,166,9,0.000000,0.000000,0.000000

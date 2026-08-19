@@ -1,0 +1,153 @@
+{
+  "scope": "revision-stage development identities only",
+  "attempted_cases_per_setting": 190,
+  "subject_count": 10,
+  "selection_rule": "Equal weight for normalized subject-level fit and deformation domains; no S8-derived threshold and no evaluation result used",
+  "fit_metrics": [
+    "post_full_median_mm",
+    "post_full_p90_mm",
+    "post_nose_median_mm",
+    "post_nose_p90_mm",
+    "post_anchor_mm"
+  ],
+  "deformation_metrics": [
+    "non_eye_strain_p99",
+    "eye_boundary_strain_p99"
+  ],
+  "settings": {
+    "FULL_C300_R1_S05": {
+      "controls": 300,
+      "rounds": 1,
+      "step": 0.5
+    },
+    "FULL_C300_R1_S10": {
+      "controls": 300,
+      "rounds": 1,
+      "step": 1.0
+    },
+    "FULL_C600_R1_S10": {
+      "controls": 600,
+      "rounds": 1,
+      "step": 1.0
+    },
+    "FULL_C600_R2_S10": {
+      "controls": 600,
+      "rounds": 2,
+      "step": 1.0
+    }
+  },
+  "eligibility": {
+    "FULL_C300_R1_S05": {
+      "eligible": true,
+      "ineligible_reasons": []
+    },
+    "FULL_C300_R1_S10": {
+      "eligible": true,
+      "ineligible_reasons": []
+    },
+    "FULL_C600_R1_S10": {
+      "eligible": true,
+      "ineligible_reasons": []
+    },
+    "FULL_C600_R2_S10": {
+      "eligible": false,
+      "ineligible_reasons": [
+        "completed 188/190 attempts",
+        "passed orientation for 188/190 attempts"
+      ]
+    }
+  },
+  "eligible_setting_ids": [
+    "FULL_C300_R1_S05",
+    "FULL_C300_R1_S10",
+    "FULL_C600_R1_S10"
+  ],
+  "subject_level_aggregate_values": {
+    "FULL_C300_R1_S05": {
+      "post_full_median_mm": 3.138989142476075,
+      "post_full_p90_mm": 12.65971690922159,
+      "post_nose_median_mm": 2.4641109871983895,
+      "post_nose_p90_mm": 5.420288561788009,
+      "post_anchor_mm": 9.637848548709204,
+      "non_eye_strain_p99": 0.04952634670009261,
+      "eye_boundary_strain_p99": 0.08693669213606275
+    },
+    "FULL_C300_R1_S10": {
+      "post_full_median_mm": 2.811582719756412,
+      "post_full_p90_mm": 12.344837276638547,
+      "post_nose_median_mm": 2.292601779630394,
+      "post_nose_p90_mm": 5.263315709714719,
+      "post_anchor_mm": 9.706492044185758,
+      "non_eye_strain_p99": 0.09441750921712148,
+      "eye_boundary_strain_p99": 0.19516160455812226
+    },
+    "FULL_C600_R1_S10": {
+      "post_full_median_mm": 2.7298574259645294,
+      "post_full_p90_mm": 12.243474088991924,
+      "post_nose_median_mm": 2.164837440307071,
+      "post_nose_p90_mm": 5.141909489136468,
+      "post_anchor_mm": 9.656167057517353,
+      "non_eye_strain_p99": 0.13206774118736558,
+      "eye_boundary_strain_p99": 0.2864692456620808
+    }
+  },
+  "normalized_values": {
+    "FULL_C300_R1_S05": {
+      "post_full_median_mm": 1.0,
+      "post_full_p90_mm": 1.0,
+      "post_nose_median_mm": 1.0,
+      "post_nose_p90_mm": 1.0,
+      "post_anchor_mm": 0.0,
+      "non_eye_strain_p99": 0.0,
+      "eye_boundary_strain_p99": 0.0
+    },
+    "FULL_C300_R1_S10": {
+      "post_full_median_mm": 0.1997530147227688,
+      "post_full_p90_mm": 0.24351936590928983,
+      "post_nose_median_mm": 0.4269149099560095,
+      "post_nose_p90_mm": 0.4361183454699575,
+      "post_anchor_mm": 1.0,
+      "non_eye_strain_p99": 0.5438624195275817,
+      "eye_boundary_strain_p99": 0.5423922588548816
+    },
+    "FULL_C600_R1_S10": {
+      "post_full_median_mm": 0.0,
+      "post_full_p90_mm": 0.0,
+      "post_nose_median_mm": 0.0,
+      "post_nose_p90_mm": 0.0,
+      "post_anchor_mm": 0.26686445206458487,
+      "non_eye_strain_p99": 1.0,
+      "eye_boundary_strain_p99": 1.0
+    }
+  },
+  "scores": {
+    "FULL_C300_R1_S05": {
+      "fit_score": 0.8,
+      "deformation_score": 0.0,
+      "balanced_score": 0.4
+    },
+    "FULL_C300_R1_S10": {
+      "fit_score": 0.46126112721160506,
+      "deformation_score": 0.5431273391912317,
+      "balanced_score": 0.5021942332014184
+    },
+    "FULL_C600_R1_S10": {
+      "fit_score": 0.05337289041291697,
+      "deformation_score": 1.0,
+      "balanced_score": 0.5266864452064585
+    }
+  },
+  "selected_setting_id": "FULL_C300_R1_S05",
+  "selected_configuration": {
+    "controls": 300,
+    "rounds": 1,
+    "step": 0.5
+  },
+  "input_hashes": {
+    "FULL_C300_R1_S05": "d2661cde8e1d64a2a0828f836e6bbe22222ec02075bb60b356d2d4aacc679223",
+    "FULL_C300_R1_S10": "4899b0200749da529d281d56083c780177664c7d109dae59a59c2f6423640766",
+    "FULL_C600_R1_S10": "09caf9314fb65e024812e9f4bb7a691b8f2026c3b7752cdfe7eba575e60a4d37",
+    "FULL_C600_R2_S10": "310691140307511fd071c8d8362e1080cb734b408f43ad45b0d0fd3af6cbf544"
+  },
+  "script_sha256": "c2ccf44bc4361689c600e1fcc62ce283dfe2242b3caa09b5da458a312c97197d"
+}

@@ -1,5 +1,5 @@
 metric,value,ci_low,ci_high,notes
-cases,190,,,10 held-out identities with 19 expressions each
+cases,190,,,10 evaluation identities with 19 expressions each
 primary_raters,2,,,each rated all 190 cases in a separate session
 adjudicator,1,,,rated only the five R1-R2 overall-usability disagreements without seeing the primary ratings
 r1_r2_overall_agreement,0.9736842105,,,185 of 190 cases

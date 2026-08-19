@@ -22,8 +22,8 @@ before optimization. Source scale is then fixed by the target-to-source 3D
 interocular-distance ratio. Distance-valued inherited optimizer constants are
 converted with the median factor from development identities only
 (262.581050 mm per registration unit). Final case measurements and QC evidence
-always use the official factor for that case's target; no held-out scale is
-used to select a threshold or method setting.
+always use the official factor for that case's target; no factor or outcome
+from the evaluation partition is used to select a threshold or method setting.
 
 Official source:
 <https://github.com/zhuhao-nju/facescape/blob/master/toolkit/demo_align.ipynb>

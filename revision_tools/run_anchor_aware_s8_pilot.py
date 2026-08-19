@@ -27,7 +27,7 @@ VARIANTS = (
 )
 S8_CONTOURS = (0.00, 0.22, 0.40, 0.55, 0.68, 0.78, 0.87, 0.94)
 # Median official expression-18 scale of the frozen development identities.
-# Held-out identity scales are not used to define any S8 physical parameter.
+# Evaluation-identity scales are not used to define any S8 physical parameter.
 REFERENCE_MM_PER_UNIT = 262.58104988598365
 
 
